@@ -7,12 +7,14 @@
 .light {
   --primary-color: #000b49;
   --secondary-color: #9b0000;
-  --text-color: rgb(44, 41, 41);
+  --text-color: #2c2929;
   --text-light-color: #808080;
-  --bg-color: #EDEDED;
+  --bg-color: #ededed;
   --border-color: #d2d2d2;
   --table-light-bg: #fafafa;
   --bg-search: white;
+  --purple: #784ed1;
+  --gold: #ffd700;
 }
 
 .dark {
@@ -23,7 +25,9 @@
   --bg-color: #171717;
   --border-color: #929292;
   --table-light-bg: #131212;
-  --bg-search: rgb(77, 77, 77);
+  --bg-search: #dadada;
+  --purple: #784ed1;
+  --gold: #fde24b;
 }
 
 body {
@@ -36,7 +40,7 @@ header {
   height: 100px;
   background-color: var(--primary-color);
   color: var(--secondary-color);
-  font-size: 27px;
+  font-size: 25px;
   line-height: 100px;
   text-align: center;
 }
@@ -111,29 +115,29 @@ main {
 }
 
 .active {
-  border: 2px solid var(--border-color);
-  box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
+  background-color: var(--purple) !important;
+  color: white;
 }
 
 .search-crypto {
   width: 60%;
   height: 50px;
   margin: 20px 0;
-  border-radius: 3px;
+  border-radius: 5px;
   border: none;
   padding-left: 10px;
   outline: none;
-  font-size: 17px;
-  color: var(--text-color);
+  font-size: 20px;
   background-color: var(--bg-search);
+  border: 2px solid var(--purple);
 }
 
-.number-view{
+.number-view {
   color: var(--text-color);
 }
 
 .search-crypto:focus {
-  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 5px 0 var(--purple);
 }
 
 .m-l {
@@ -145,7 +149,8 @@ select {
   border: none;
   outline: none;
   border-radius: 3px;
-  background-color: var(--bg-search);
+  background-color: var(--purple);
+  color: white;
 }
 
 table {
@@ -154,13 +159,13 @@ table {
 }
 
 th {
-  height: 50px;
-  border-bottom: 3px solid var(--border-color);
+  height: 80px;
+  border-bottom: 4px solid var(--purple);
   text-transform: capitalize;
 }
 
 tr {
-  height: 80px;
+  height: 90px;
   color: var(--text-color);
 }
 
@@ -169,8 +174,8 @@ tbody tr:nth-child(odd) {
 }
 
 td {
-  border-bottom: 1px solid var(--border-color);
-  height: 80px;
+  border-bottom: 1px solid var(--gold);
+  height: 90px;
   font-size: 16px;
   color: var(--text-color);
 }
@@ -186,8 +191,8 @@ td {
 }
 
 .img-name img {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   margin-left: 10px;
 }
 
@@ -205,14 +210,29 @@ td {
 .market-cap {
   width: 20%;
   text-align: center;
+  font-weight: bold;
 }
 
 .percentage-top {
-  color: green;
+  color: #15d1c6;
 }
 
 .percentage-button {
-  color: red;
+  color: #f26672;
+}
+
+.show-chart {
+  text-align: center;
+}
+
+.show-chart button {
+  border: none;
+  outline: none;
+  background-color: var(--purple);
+  padding: 5px 10px;
+  color: var(--gold);
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 /*   chart    */
@@ -220,9 +240,11 @@ td {
   width: 100%;
 }
 
-.chart-wrapper td{
+.chart-wrapper td {
   width: 100%;
   background-color: var(--bg-search);
+  border: 2px solid var(--purple);
+  border-top: none;
 }
 
 .chart-title {

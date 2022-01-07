@@ -1,7 +1,7 @@
 const CoinChart = ({ data }) => {
   React.useEffect(() => {
     chart(data.sparkline_in_7d.price, data.name, data.id)
-  }, [])
+  }, [data])
   return (
     <tr className="chart-wrapper">
       <td colSpan="7">
